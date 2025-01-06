@@ -8,12 +8,12 @@ $(document).ready(function () {
         } else {
             $(this).removeClass("active");
         }
-    });
+});
 
 
 
-    // B) Form Validation and Navigation
-    $("#submitBtn").click(function () {
+// B) Form Validation and Navigation
+$("#submitBtn").click(function () {
         let name = $("#name").val().trim();
         let email = $("#email").val().trim();
         let message = $("#message").val().trim();
@@ -69,14 +69,15 @@ $(document).ready(function () {
         return re.test(email);
     }
 
-    // C) Display user info on home page after submit the form
-    if (currentPage === "index.html") {
+    
+// C) Display user info on home page after submit the form
+if (currentPage === "index.html") {
         let userName = localStorage.getItem("userName");
         let userState = localStorage.getItem("userState");
         if (userName && userState) {
             $(".welcome").after(
                 `<div class="userDetail">
-                    Hi, <strong>${userName}</strong>, I like your <strong>${userState}</strong> state
+                    Hi, <strong>${userName}</strong>, I like your <strong>${userState}</strong> District
                 </div>`
             );
             localStorage.clear();
@@ -95,7 +96,6 @@ $(document).ready(function() {
         `);
     }
 });
-
 
 // E) Hide the navbar when we scroll down & show the navbar when we scroll up
 $(document).ready(function () {

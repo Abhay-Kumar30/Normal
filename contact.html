@@ -14,10 +14,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
 
-     <!-- custom style -->
-     <link rel="stylesheet" href="style/style.css">
-     <link rel="stylesheet" href="style/nav.css">
-     <link rel="stylesheet" href="style/footer.css">
+    <!-- custom style -->
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/nav.css">
+    <link rel="stylesheet" href="style/footer.css">
     <link rel="stylesheet" href="style/contact.css">
     <link rel="stylesheet" href="style/font.css">
 
@@ -54,24 +54,24 @@
         <form id="contactForm" class="mt-5">
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" id="name" class="form-control" placeholder="Enter your name">
+                <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" class="form-control" placeholder="Enter your email">
+                <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
             </div>
             <div class="form-group">
                 <label for="message">Message</label>
-                <textarea id="message" class="form-control" rows="4" placeholder="Enter your message"></textarea>
+                <textarea id="message" class="form-control" rows="4" placeholder="Enter your message" required></textarea>
             </div>
             <div class="form-group">
                 <label for="state">State</label>
-                <select id="state" class="form-control">
-                    <option value="">Select your state</option>
-                    <option value="Himachal Pradesh">Himachal Pradesh</option>
-                    <option value="Uttarakhand">Uttarakhand</option>
-                    <option value="Punjab">Punjab</option>
-                    <option value="Haryana">Haryana</option>
+                <select id="state" class="form-control" required>
+                    <option value="">Select your District</option>
+                    <option value="Lucknow">Lucknow</option>
+                    <option value="Prayagraj">Prayagraj</option>
+                    <option value="Agra">Agra</option>
+                    <option value="Gautambudh Nagar">Gautambudh Nagar</option>
                 </select>
             </div>
             <button type="button" id="submitBtn" class="btn btn-primary mt-3">Submit</button>
