@@ -1,0 +1,36 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+html{
+    font-size:1rem;
+}
+
+body{
+    background-color: #f5f5f5;
+    position:relative;
+}
+
+
+.container{
+    width:100%;
+    max-width:1440px;
+    margin:0 auto;
+    padding:60px 8%;
+}
+
+
+/* Highlight Invalid Fields */
+.is-invalid {
+    border-color: #dc3545 !important;
+}
+.is-invalid:focus {
+    box-shadow: 0 0 5px #dc3545 !important;
+}
+
+button, a, li{
+    cursor: pointer;
+}
+
+

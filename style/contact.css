@@ -1,0 +1,30 @@
+.navBarBox {
+    background: #2c2c2c4c; 
+}
+#contactForm{
+    max-width:70vw;
+   
+}
+
+.form-control {
+    padding: 10px 15px; 
+    font-size: 16px; 
+    color: #333; 
+    font-family: Arial, sans-serif; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    margin-bottom: 20px;
+}
+
+.form-control::placeholder {
+    color: #999; 
+}
+
+
+.form-control:focus {
+    border-color: #007bff; 
+    box-shadow: 0 0 5px rgb(240, 247, 255); 
+    outline: none; 
+}
+
+

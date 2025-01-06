@@ -1,0 +1,87 @@
+
+H1{
+    font-family: "Inter", serif;
+    font-size: clamp(1.75rem, 1.607rem + 0.714vw, 2.25rem);
+    line-height:2;
+    letter-spacing:0.0125em;
+    color:#424242;
+    
+}
+H2{
+    font-family: "Inter", serif;
+    font-size: clamp(1.5rem, 1.393rem + 0.536vw, 1.875rem);
+    line-height:2;
+    letter-spacing:0.0125em;
+    color:#424242;
+}
+H3{
+    font-family: "Inter", serif;
+    font-size: clamp(1.25rem, 1.179rem + 0.357vw, 1.5rem);
+    line-height:2;
+    letter-spacing:0.2px;
+    color:#424242;
+}
+H4{
+    font-family: "Inter", serif;
+    font-size: clamp(1.125rem, 1.089rem + 0.179vw, 1.25rem);
+    line-height:2;
+    letter-spacing:0.2px;
+    color:#424242;
+}
+H5{
+    font-family: "Inter", serif;
+    font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
+    line-height:2;
+    letter-spacing:0.2px;
+    color:#424242;
+}
+H6{
+    font-family: "Inter", serif;
+    font-size: clamp(0.875rem, 0.839rem + 0.179vw, 1rem);
+    line-height:2;
+    letter-spacing:0.2px;
+    color:#424242;
+}
+
+p{
+    font-family: "Inter", serif;
+    font-size: clamp(0.875rem, 0.839rem + 0.179vw, 1rem);
+    line-height:2;
+    letter-spacing:0.2px;
+    color:#424242;
+}
+
+.logoText{
+    font-family: "Inter", serif;
+    color:#111111;
+    font-weight: 700;
+    font-size:30px;
+}
+
+.nav-link{
+    font-family: "Inter", serif;
+    color:#ffffff !important;
+    font-size:16px;
+    padding:4px 0;
+}
+
+.navbar-nav .nav-link.active {
+    font-weight: 800;
+    color: #151515 !important;
+}
+
+.userDetail{
+    font-family: "Inter", serif;
+    font-size: clamp(1.25rem, 1.179rem + 0.357vw, 1.5rem);
+    font-weight: 200;
+    margin-top:20px;
+    text-align: center;
+    color:white;
+}
+
+
+.hero .welcome{
+    color:white;
+    text-align: center;
+    letter-spacing:0.2em;
+    }
