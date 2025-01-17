@@ -11,6 +11,30 @@ $(document).ready(function () {
 });
 
 
+// update the district selection on the basis of state selected
+$(document).ready(function () {
+    const districts = {
+        haryana: ["Gurgaon", "Faridabad", "Panipat", "Ambala"],
+        delhi: ["Central Delhi", "North Delhi", "South Delhi", "West Delhi"],
+        rajasthan: ["Jaipur", "Jodhpur", "Udaipur", "Kota"],
+        uttar_pradesh: ["Lucknow", "Kanpur", "Varanasi", "Agra"]
+    };
+
+    // Populate districts based on selected state
+    $('#state').change(function () {
+        const selectedState = $(this).val();
+        const districtDropdown = $('#district');
+        districtDropdown.empty(); // Clear previous options
+        districtDropdown.append('<option value="">-- Select District --</option>');
+
+        if (selectedState && districts[selectedState]) {
+            districts[selectedState].forEach(district => {
+                districtDropdown.append(`<option value="${district}">${district}</option>`);
+            });
+        }
+    });
+
+});
 
 // B) Form Validation and Navigation
 $("#submitBtn").click(function () {
@@ -18,9 +42,10 @@ $("#submitBtn").click(function () {
         let email = $("#email").val().trim();
         let message = $("#message").val().trim();
         let state = $("#state").val();
-
+        let district = $('#district').val();
         let isValid = true;
 
+       
         // Clear previous errors
         $(".form-control").removeClass("is-invalid");
 
@@ -49,11 +74,18 @@ $("#submitBtn").click(function () {
             isValid = false;
         }
 
+        if (district === "") {
+            $("#district").addClass("is-invalid");
+            if (isValid) $("#district")[0].scrollIntoView({ behavior: "smooth" });
+            isValid = false;
+        }
+
         // If all fields are valid
         if (isValid) {
             // Store data in localStorage
             localStorage.setItem("userName", name);
             localStorage.setItem("userState", state);
+            localStorage.setItem("userDistrict", district);
 
             // Reset form
             $("#contactForm")[0].reset();
@@ -74,10 +106,11 @@ $("#submitBtn").click(function () {
 if (currentPage === "index.html") {
         let userName = localStorage.getItem("userName");
         let userState = localStorage.getItem("userState");
-        if (userName && userState) {
+        let userDistrict = localStorage.getItem("userDistrict");
+        if (userName && userState && userDistrict) {
             $(".welcome").after(
                 `<div class="userDetail">
-                    Hi, <strong>${userName}</strong>, I like your <strong>${userState}</strong> District
+                    Hi, <strong>${userName}</strong>, I like your <strong>${userState}</strong> State and <strong>${userDistrict}</strong> District
                 </div>`
             );
             localStorage.clear();
